@@ -25,8 +25,8 @@ transition: .2s linear;
 
 html{
 font-size: 62.5%;
-overflow-x: hidden;
-scroll-behavior: smooth;
+/* overflow-x: hidden; */
+/* scroll-behavior: smooth; */
 }
 
 body{
@@ -46,7 +46,7 @@ body.active{
 }
 
 section{
-min-height: 100vh;
+min-height: 70vh;
 padding:2rem;
 }
 
@@ -90,6 +90,12 @@ border-right: var(--border);
 height: 100%;
 padding:2rem;
 text-align: center;
+/* border: 2PX SOLID RED; */
+overflow: scroll;
+}
+
+.header::-webkit-scrollbar{
+    display: none;
 }
 
 .header .user img{
@@ -113,6 +119,8 @@ font-size: 1.5rem;
 
 .header .navbar{
 padding-top: 1rem;
+/* overflow: hidden; */
+/* scroll-behavior: smooth; */
 }
 
 .header .navbar a{
@@ -123,6 +131,7 @@ border-radius: 5rem;
 font-size: 2rem;
 box-shadow: var(--box-shadow);
 color:var(--black);
+
 }
 
 .header .navbar a:hover{
@@ -382,10 +391,30 @@ clip-path: circle(100%);
 color:#fff;
 }
 
+.main-project{
+    /* border: 2px solid red; */
+    /* padding-bottom: 0; */
+}
+.main-project .box-container{
+   /* border: 2px solid red !important; */
+   height: 450px !important;
+}
+
+.main-project .box-container .box {
+    height:100% !important;
+    border-radius: .5rem;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    border: 1rem solid transparent;
+    /* border: 2px solid red; */
+}
 .portfolio .box-container{
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
-gap:2rem;
+gap:1rem;
+/* border: 2px solid red; */
+
 }
 
 .portfolio .box-container .box{
@@ -395,6 +424,7 @@ overflow:hidden;
 box-shadow: var(--box-shadow);
 position: relative;
 border:1rem solid transparent;
+/* border: 2px solid red; */
 }
 .box  h3{
     font-size: 2rem;
@@ -405,8 +435,17 @@ border:1rem solid transparent;
 height: 80%;
 width: 80%;
 object-fit: contain;
-margin: 15px;
+margin: 10px;
 }
+
+
+.main-project .box-container .box img {
+       height: 100%;
+       width: 100%;
+       margin: 5px !important;
+       object-fit: contain;
+}
+
 
 .portfolio .box-container .box .content{
 position: absolute;
@@ -535,4 +574,15 @@ html{
     border-right: 0;
 }
 
+
+.main-project .box-container .box {
+    /* height: 100% !important;
+    border-radius: .5rem;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    border: 1rem solid transparent; */
+    border: 2px solid red;
+    margin-bottom: -2200px;
+}
 }
